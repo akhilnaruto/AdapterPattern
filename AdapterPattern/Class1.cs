@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace AdapterPattern
 {
-    public class test
+    public class DataRenderer
     {
     }
 }
