@@ -51,14 +51,15 @@ namespace AdapterPattern.Test
         [TestMethod]
         public void RenderTwoPatterns()
         {
-            var myRenderer = new PatternRenderer();
+            var patternCollectionAdapter = new PatternCollectionDbAdapter();
+            var myRenderer = new PatternRenderer(patternCollectionAdapter);
             var writer = new StringWriter();
             myRenderer.Render(writer);
             string result = writer.ToString();
             Console.Write(result);
 
             int lineCount = result.Count(c => c == '\n');
-            Assert.AreEqual(3, lineCount);
+            Assert.AreEqual(4, lineCount);
         }
 
 

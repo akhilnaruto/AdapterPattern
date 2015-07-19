@@ -48,8 +48,9 @@
     <Compile Include="PatternRenderer.cs" />
     <Compile Include="PatternRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="PatternCollectionDbAdapter.cs" />
     <Compile Include="Test\RendererTest.cs" />
-    <Compile Include="Test\StubDbAdapter.cs" />
+    <Compile Include="StubDbAdapter.cs" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{82A7F48D-3B50-4B1E-B82E-3ADA8210C358}" />
