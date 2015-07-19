@@ -11,7 +11,7 @@ using System.Threading.Tasks;
 namespace AdapterPattern.Test
 {
     [TestClass]
-    public class DataRendererTest
+    public class RendererTest
     {
         [TestMethod]
         public void RenderOneRowGivenStubDataAdapter()
@@ -47,6 +47,20 @@ namespace AdapterPattern.Test
             int lineCount = result.Count(c => c == '\n');
             Assert.AreEqual(4, lineCount);
         }
+
+        [TestMethod]
+        public void RenderTwoPatterns()
+        {
+            var myRenderer = new PatternRenderer();
+            var writer = new StringWriter();
+            myRenderer.Render(writer);
+            string result = writer.ToString();
+            Console.Write(result);
+
+            int lineCount = result.Count(c => c == '\n');
+            Assert.AreEqual(3, lineCount);
+        }
+
 
     }
 }
