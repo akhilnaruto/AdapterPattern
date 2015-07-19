@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace AdapterPattern
 {
-    public class DataRenderer
+    public class DataRenderer : IRenderer
     {
         private readonly IDbDataAdapter _dataAdapter;
 
